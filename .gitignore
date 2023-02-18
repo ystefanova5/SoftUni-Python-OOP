@@ -130,3 +130,5 @@ dmypy.json
 
 # Custom files to ignore
 test.py
+*.pptx
+*.docx
