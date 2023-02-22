@@ -3,3 +3,4 @@ class Vehicle:
         self.mileage = mileage
         self.max_speed = max_speed
         self.gadgets = []
+
