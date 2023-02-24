@@ -13,7 +13,7 @@ class Smartphone:
             self.memory -= app_memory
             return f"Installing {app}"
 
-        elif self.memory >= app_memory and self.is_on == False:
+        elif self.memory >= app_memory and not self.is_on:
             return f"Turn on your phone to install {app}"
 
         return f"Not enough memory to install {app}"
