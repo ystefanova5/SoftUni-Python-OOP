@@ -12,7 +12,7 @@ class Trainer:
                 return "This pokemon is already caught"
 
         self.pokemons.append(pokemon)
-        return f"Caught {pokemon.name} with health {pokemon.health}"
+        return f"Caught {pokemon.pokemon_details()}"
 
     def release_pokemon(self, pokemon_name: str):
         for idx, member in enumerate(self.pokemons):
