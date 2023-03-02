@@ -18,6 +18,7 @@ class Registration:
     def change_username(self, user_id: int, new_username: str, library: Library):
         for user in library.user_records:
             if user.user_id == user_id and user.username != new_username:
+                user.username = new_username
                 if new_username in library.rented_books:
                     library.rented_books[new_username] = library.rented_books.pop(user.username)
                 user.username = new_username
