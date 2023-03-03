@@ -20,8 +20,8 @@ class Profile:
 
     @password.setter
     def password(self, value):
-        match_uppercase = [1 for x in value if x.isupper()]
-        match_digit = [1 for x in value if x.isdigit()]
+        match_uppercase = any([True for x in value if x.isupper()])
+        match_digit = any([True for x in value if x.isdigit()])
         if len(value) >= 8 and match_uppercase and match_digit:
             self.__password = value
             return
