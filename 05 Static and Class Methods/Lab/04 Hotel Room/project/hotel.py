@@ -18,8 +18,8 @@ class Hotel:
 
     def take_room(self, room_number, people) -> str or None:
         room = next(filter(lambda x: x.number == room_number, self.rooms))
-        room.take_room(people)
-        self.guests += room.guests
+        if room.take_room(people) is None:
+            self.guests += room.guests
 
     def free_room(self, room_number) -> str or None:
         room = next(filter(lambda x: x.number == room_number, self.rooms))
