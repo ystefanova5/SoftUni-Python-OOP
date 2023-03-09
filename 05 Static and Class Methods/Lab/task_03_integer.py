@@ -43,3 +43,6 @@ print(first_num.value)
 
 second_num = Integer.from_roman("CXIV")
 print(second_num.value)
+
+print(Integer.from_float(7.6).value)
+print(Integer.from_string("2.8").value)
