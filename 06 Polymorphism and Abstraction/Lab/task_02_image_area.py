@@ -14,12 +14,12 @@ class ImageArea:
 
     def __eq__(self, other):
         return self.get_area() == other.get_area()
-
-    def __lt__(self, other):
-        return self.get_area() < other.get_area()
-
-    def __le__(self, other):
-        return self.get_area() <= other.get_area()
-
-    def __ne__(self, other):
-        return self.get_area() != other.get_area()
+    #
+    # def __lt__(self, other):
+    #     return self.get_area() < other.get_area()
+    #
+    # def __le__(self, other):
+    #     return self.get_area() <= other.get_area()
+    #
+    # def __ne__(self, other):
+    #     return self.get_area() != other.get_area()
