@@ -50,6 +50,6 @@ class Account:
 
     def __add__(self, other):
         new_account = Account(f"{self.owner}&{other.owner}", self.amount + other.amount)
-        new_account._transactions = self._transactions + other._transactions
+        new_account._transactions = self._transactions + [transaction for transaction in other]
 
         return new_account
