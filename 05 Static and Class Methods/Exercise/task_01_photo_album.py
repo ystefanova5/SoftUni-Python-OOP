@@ -10,7 +10,7 @@ class PhotoAlbum:
 
     @classmethod
     def from_photos_count(cls, photos_count: int):
-        return cls(ceil(photos_count / PhotoAlbum.PAGE_CAPACITY))
+        return cls(ceil(photos_count / cls.PAGE_CAPACITY))
 
     def add_photo(self, label: str):
         for idx in range(len(self.photos)):
