@@ -4,7 +4,7 @@ class Topic:
         self.topic = topic
         self.storage_folder = storage_folder
 
-    def edit(self, new_topic: str, new_storage_folder: str):
+    def edit(self, new_topic: str, new_storage_folder: str) -> None:
         self.topic = new_topic
         self.storage_folder = new_storage_folder
 

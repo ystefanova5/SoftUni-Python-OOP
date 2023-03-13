@@ -24,7 +24,7 @@ class Document:
         if tag_content in self.tags:
             self.tags.remove(tag_content)
 
-    def edit(self, file_name: str):
+    def edit(self, file_name: str) -> None:
         self.file_name = file_name
 
     def __repr__(self):
