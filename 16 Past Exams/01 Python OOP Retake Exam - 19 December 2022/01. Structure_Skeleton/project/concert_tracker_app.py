@@ -92,17 +92,7 @@ class ConcertTrackerApp:
 
     def start_concert(self, concert_place: str, band_name: str):
         band = next(filter(lambda b: b.name == band_name, self.bands))
-        # method1:
-        # concert = next(filter(lambda c: c.place == concert_place, self.concerts))
-
-        # method2:
-        # concert = [c for c in self.concerts if c.place == concert_place][0] # method2
-
-        # method3:
-        concert = None
-        for item in self.concerts:
-            if item.place == concert_place:
-                concert = item
+        concert = next(filter(lambda c: c.place == concert_place, self.concerts))
 
         band_members = [member.__class__.__name__ for member in band.members]
         if set(band_members) != set(ConcertTrackerApp.VALID_MUSICIAN_TYPES):
