@@ -7,7 +7,7 @@ class Animal(ABC):
     WEIGHT_INCREASE = 0
 
     @abstractmethod
-    def __init__(self, name:str, weight: float):
+    def __init__(self, name: str, weight: float):
         self.name = name
         self.weight = weight
         self.food_eaten = 0
