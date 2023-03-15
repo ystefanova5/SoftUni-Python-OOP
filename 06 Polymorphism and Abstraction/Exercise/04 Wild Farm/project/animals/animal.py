@@ -5,6 +5,7 @@ from typing import Any
 class Animal(ABC):
     FOOD_PREFERENCE = []
     WEIGHT_INCREASE = 0
+
     @abstractmethod
     def __init__(self, name:str, weight: float):
         self.name = name
