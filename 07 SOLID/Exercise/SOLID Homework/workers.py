@@ -1,18 +1,18 @@
 from abc import ABC, abstractmethod
 
 
-class BaseWorker(ABC):
+class AbstractWorker(ABC):
     @abstractmethod
     def work(self):
         ...
 
 
-class Worker(BaseWorker):
+class Worker(AbstractWorker):
     def work(self):
         print("I'm working!!")
 
 
-class SuperWorker(BaseWorker):
+class SuperWorker(AbstractWorker):
     def work(self):
         print("I work very hard!!!")
 
@@ -22,7 +22,7 @@ class Manager:
         self.worker = None
 
     def set_worker(self, worker):
-        assert isinstance(worker, BaseWorker), '`worker` must be of type {}'.format(Worker)
+        assert isinstance(worker, AbstractWorker), '`worker` must be of type {}'.format(Worker)
 
         self.worker = worker
 
