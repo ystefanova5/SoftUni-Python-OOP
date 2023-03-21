@@ -1,5 +1,5 @@
 def vowel_filter(function):
-    vowels = ["a", "o", "u", "i", "e", "y"]
+    vowels = "AOUEIYaoueiy"
 
     def wrapper():
         letters = function()
