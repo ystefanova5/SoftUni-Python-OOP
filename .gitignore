@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 # Custom files to ignore
-test.py
+my_test.py
 *.pptx
 *.docx
 example.py
