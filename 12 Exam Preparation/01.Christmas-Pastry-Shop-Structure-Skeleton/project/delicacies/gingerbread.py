@@ -3,7 +3,6 @@ from project.delicacies.delicacy import Delicacy
 
 class Gingerbread(Delicacy):
     PORTION_SIZE = 200
-    DELICACY_TYPE = "Gingerbread"
 
     def __init__(self, name: str, price: float):
         super().__init__(name, Gingerbread.PORTION_SIZE, price)
