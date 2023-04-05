@@ -76,35 +76,21 @@ class Controller:
         elif player_two.stamina == 0:
             return f"Player {player_two.name} does not have enough stamina."
 
-        if player_one.stamina < player_two.stamina:
-            if player_two.stamina > player_one.stamina / 2:
-                player_two.stamina -= player_one.stamina / 2
-            else:
-                player_two.stamina = 0
-                winner = player_one
-                return f"Winner: {winner.name}"
+        if player_one.stamina > player_two.stamina:
+            player_one, player_two = player_two, player_one
+        if player_two.stamina > player_one.stamina / 2:
+            player_two.stamina -= player_one.stamina / 2
+        else:
+            player_two.stamina = 0
+            winner = player_one
+            return f"Winner: {winner.name}"
 
-            if player_one.stamina > player_two.stamina / 2:
-                player_one.stamina -= player_two.stamina / 2
-            else:
-                player_one.stamina = 0
-                winner = player_two
-                return f"Winner: {winner.name}"
-
-        if player_two.stamina < player_one.stamina:
-            if player_one.stamina > player_two.stamina / 2:
-                player_one.stamina -= player_two.stamina / 2
-            else:
-                player_one.stamina = 0
-                winner = player_two
-                return f"Winner: {winner.name}"
-
-            if player_two.stamina > player_one.stamina / 2:
-                player_two.stamina -= player_one.stamina / 2
-            else:
-                player_two.stamina = 0
-                winner = player_one
-                return f"Winner: {winner.name}"
+        if player_one.stamina > player_two.stamina / 2:
+            player_one.stamina -= player_two.stamina / 2
+        else:
+            player_one.stamina = 0
+            winner = player_two
+            return f"Winner: {winner.name}"
 
         if player_one.stamina > player_two.stamina:
             winner = player_one
