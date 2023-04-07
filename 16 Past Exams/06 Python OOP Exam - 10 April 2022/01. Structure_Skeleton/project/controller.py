@@ -78,6 +78,7 @@ class Controller:
 
         if player_one.stamina > player_two.stamina:
             player_one, player_two = player_two, player_one
+
         if player_two.stamina > player_one.stamina / 2:
             player_two.stamina -= player_one.stamina / 2
         else:
