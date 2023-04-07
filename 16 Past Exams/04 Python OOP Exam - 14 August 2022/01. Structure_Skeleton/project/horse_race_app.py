@@ -67,7 +67,6 @@ class HorseRaceApp:
             return f"Jockey {jockey_name} already has a horse."
 
         horse.is_taken = True
-        horse.jockey = jockey
         jockey.horse = horse
 
         return f"Jockey {jockey_name} will ride the horse {horse.name}."
