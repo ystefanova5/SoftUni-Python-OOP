@@ -16,7 +16,12 @@ class HashTable:
             raise KeyError(f"{key} is not a valid key!")
 
     def __setitem__(self, key, value):
-        if self.size() == self.__max_capacity:  # First we check if we have reached the array's capacity
+        if key in self.__keys:  # First we check if this key is already created, and if it is we update its value
+            index = self.__keys.index(key)
+            self.__values[index] = value
+            return
+
+        if self.size() == self.__max_capacity:  # Then we check if we have reached the array's capacity
             self.__resize()
 
         index = self.__calc_index(key)
@@ -41,7 +46,7 @@ class HashTable:
         self.__keys = self.__keys + [None] * self.__max_capacity
         self.__values = self.__values + [None] * self.__max_capacity
 
-        self.__min_index = self.__max_capacity
+        # self.__min_index = self.__max_capacity
         self.__max_capacity *= 2
 
     def size(self):
@@ -83,12 +88,12 @@ print(table["name"])
 
 print(table)
 print(table.get("name"))
-print(table.get("n"))   # returns None
+print(table.get("n"))  # returns None
 
 print(table["age"])
 print(len(table))
-time.sleep(1)
 
+time.sleep(1)
 end_time = time.time()
 execution = end_time - start_time
-print(f"Executed in: {execution * 1000 - 1000:.10f} milliseconds")
+# print(f"Executed in: {execution * 1000 - 1000:.10f} milliseconds")
